@@ -1,0 +1,59 @@
+@use '../../globalCSS/mixins/flex-box' as mixinsFlexbox;
+@use '../../globalCSS/mixins/media-query' as mixinResponsiveness;
+
+.pokemon-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @media (max-width: 719px) {
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 720px) {
+      padding: 0 3rem;
+    }
+  
+    &__controls {
+      @include mixinsFlexbox.flex-box(column, center, center);
+      gap: 3rem;
+      margin: 2rem 0 2rem 0;
+  
+      @media (min-width: 640px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+      }
+      @include mixinResponsiveness.responsive-to(desktop) {
+        gap: 6rem;
+        margin: 4rem 0 3rem 0;
+      }
+    }
+  
+    &__total {
+      font-size: 0.875rem;
+      color: #414c5a;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      @include mixinsFlexbox.flex-box(row, flex-start, center);
+      gap: 0.5rem;
+
+      @include mixinResponsiveness.responsive-to(mobile) {
+        @include mixinsFlexbox.flex-box(row, center, center);
+      }
+
+    }
+  
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      justify-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      @include mixinResponsiveness.responsive-to(desktop) {
+        gap: 2rem;
+      }
+    }
+  }
+  
+  
