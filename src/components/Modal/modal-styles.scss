@@ -1,4 +1,5 @@
-@use '../../globalCSS/mixins/flex-box' as mixins;
+@use '../../globalCSS/mixins/flex-box' as mixinsFlexbox;
+@use '../../globalCSS/mixins/media-query' as mixinResponsiveness;
 
 .modal-overlay {
     position: fixed;
@@ -7,7 +8,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    @include mixins.flex-box(row, center, center);
+    @include mixinsFlexbox.flex-box(row, center, center);
     z-index: 1000;
   }
   
@@ -16,9 +17,14 @@
     border-radius: 1rem;
     width: 90%;
     max-width: 697px;
-    max-height: 799px;
+        max-height: 799px;
     overflow-y: auto;
     position: relative;
+
+    @include mixinResponsiveness.responsive-to(mobile) {
+        max-width: 350px;
+    }
+
   
     &__header {
     display: flex;
@@ -27,6 +33,10 @@
       padding: 1.5rem;
       background-color: #e2e8f0;
       border-bottom: 1px solid #e2e8f0;
+
+      @include mixinResponsiveness.responsive-to(mobile) {
+        padding: 0.5rem;
+      }
     }
   
     &__title {
@@ -53,15 +63,19 @@
   
     &__content {
       padding: 1.5rem;
-      @include mixins.flex-box(column, center, center);
-      padding: 5rem;
+      @include mixinsFlexbox.flex-box(column, center, center);
+      padding: 3rem;
+
+      @include mixinResponsiveness.responsive-to(mobile) {
+        padding: 1rem;
+      }
     }
   
     &__image {
       width: 195px;
       height: 195px;
       aspect-ratio: 1;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       border: #5c6878 solid 5px;
       border-radius: 0.8rem;
     }
