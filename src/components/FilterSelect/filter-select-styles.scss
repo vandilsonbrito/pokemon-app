@@ -1,0 +1,39 @@
+@use '../../globalCSS/mixins/flex-box' as mixins;
+
+.filter-select {
+    min-width: 200px;
+    width: 50%;
+    @include mixins.flex-box(row, space-between, center);
+    gap: 0.5rem;
+
+    &__icon {
+        width: 27px;
+        height: 17px;
+        margin-right: 0.5rem;
+    }
+
+    &__label {
+      font-size: 1rem;
+      font-weight: 500;
+      display: inline-block;
+      width: 150px;
+    }
+  
+    &__input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      background-color: white;
+      font-size: 0.875rem;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+  
+      &:focus {
+        border-color: #3b82f6;
+      }
+    }
+  }
+  
+  
