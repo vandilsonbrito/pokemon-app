@@ -1,10 +1,11 @@
 import "./info-card-styles.scss"
 
 interface InfoCardProps {
-  text: string
+    info: string
+    title: string
 }
 
-export function InfoCard({ text }: InfoCardProps) {
+export function InfoCard({ title, info }: InfoCardProps) {
   return (
     <div className="info-card">
         <div className="info-card__icon-wrapper">
@@ -13,9 +14,9 @@ export function InfoCard({ text }: InfoCardProps) {
                 alt="" 
                 className="info-card__icon"
             />
-            <span>Info</span>
+            <span>{title}</span>
         </div>
-      <span className="info-card__text">{text}</span>
+      <span className="info-card__text">{info}</span>
     </div>
   )
 }
