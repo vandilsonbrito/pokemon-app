@@ -5,20 +5,27 @@ import useMedia from 'use-media'
 import { useGetPokemons } from '../../hooks/useGetPokemons'
 import useModalStore from '../../stores/ModalStore'
 import { PokemonCardType } from '../../utils/types'
+import { useNavigate } from 'react-router-dom'
 
 
 export function Modal() {
     
     const { data: pokemonsData } = useGetPokemons();
     const { setIsModalOpen, isModalOpen, pokemonSelectedId } = useModalStore();
+    const navigate = useNavigate();
     const isMobile = useMedia({ maxWidth: '719px' });
 
-    if (!isModalOpen) return null
+    if (!isModalOpen || !pokemonSelectedId) return null
 
     const selectedPokemon: PokemonCardType = pokemonsData?.find(pokemon => pokemon.id === pokemonSelectedId) as PokemonCardType;
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen)
+    }
+
+    const handleSeeMore = () => {
+        setIsModalOpen(false)
+        navigate(`/pokemon/${pokemonSelectedId}`);
     }
 
     return (
@@ -60,8 +67,11 @@ export function Modal() {
                 {selectedPokemon?.flavorText}
             </p>
 
-            <button className="modal__button">
-                    Ver mais informações
+            <button 
+                onClick={handleSeeMore}
+                className="modal__button"
+                >
+                Ver mais informações
             </button>
             </div>
         </div>
