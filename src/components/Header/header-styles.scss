@@ -7,8 +7,12 @@
     box-shadow: 2px 2px 5px gray;
     height: 90px;
     @include mixinsFlexbox.flex-box(row, center, center);
-    
+
     @include mixinResponsiveness.responsive-to(tablet) {
+      padding: 1rem 3rem;
+    }
+    
+    @include mixinResponsiveness.responsive-to(large-desktop) {
       padding: 1rem 9rem;
       height: 145px;
     }
@@ -23,7 +27,11 @@
         width: 90px;
         height: 54px;
 
-      @include mixinResponsiveness.responsive-to(tablet) {
+      @include mixinResponsiveness.responsive-to(desktop) {
+        width: 158px;
+        height: 64px;
+      }
+      @include mixinResponsiveness.responsive-to(large-desktop) {
         width: 158px;
         height: 64px;
       }
@@ -37,6 +45,7 @@
 
       &:hover {
         color: #435167;
+        border-bottom: #435167 solid 2px;
       }
     }
   }
