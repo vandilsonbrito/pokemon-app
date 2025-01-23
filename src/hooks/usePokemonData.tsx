@@ -26,9 +26,7 @@ export function usePokemonData({ pageSize }: UsePokemonDataProps) {
     // Filter by selected filter
     if (filteredBy !== "all") {
       filtered = filtered.filter((pokemon) => {
-        if (filteredBy === "hpLessThan100") return Number(pokemon.hp) < 100;
-        if (filteredBy === "hpGreaterThan100") return Number(pokemon.hp) > 100;
-        return true;
+        return pokemon.types[0].includes(filteredBy);
       });
     }
 
