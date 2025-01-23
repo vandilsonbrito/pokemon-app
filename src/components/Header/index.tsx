@@ -11,7 +11,7 @@ export function Header() {
                 />
             </a>
             <nav>
-                <a href="#">Documentação</a>
+                <a href="https://github.com/vandilsonbrito/pro-brain-test">Documentação</a>
             </nav>
         </div>
     </header>
