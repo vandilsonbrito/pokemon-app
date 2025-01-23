@@ -1,0 +1,28 @@
+@use '../../globalCSS/mixins/flex-box' as mixins;
+
+.info-card {
+    width: 139px;
+    height: 66px;
+    @include mixins.flex-box(column, center, center);
+    gap: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+
+    &__icon-wrapper {
+        @include mixins.flex-box(row, center, center);
+        gap: 0.5rem;
+    }
+  
+    &__icon {
+      width: 1.1rem;
+      height: 1.1rem;
+      color: #64748b;
+    }
+  
+    &__text {
+      font-size: 0.875rem;
+      color: #666f7c;
+    }
+  }
+  
+  
