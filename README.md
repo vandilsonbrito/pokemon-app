@@ -17,6 +17,7 @@
 
 - Visto que na descrição do desafio contém a explicação para tomar como base o arquivo do Figma e a proposta é ter flexibilidade na estilização e informações a serem exibidas, esse é meu projeto.
 - Por conta da API não disponibilizar todos os atributos iguais para todos os pokemons, pode haver diferenciação ao abrir o modal.
+- Tentei ao máximo dexar a aplicação responsiva utilizando o conceito de mobile first e unidades de medidas relativas.
 - Foi usado commits atômicos para a construção do projeto, uma prática que resulta em um histórico de código mais limpo e organizado.
 - Tomei a liberdade de criar uma página dinâmica na aplicação para mostrar mais informações de cada pokemon, visto que é retornado da API muitos atributos.
 - [Link da Aplicação](https://pro-brain-teste-tecnico.vercel.app/)
