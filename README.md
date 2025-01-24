@@ -9,17 +9,17 @@
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
 - [Executando a Aplicação](#executando-a-aplicação)
-- [Como Contribuir](#como-contribuir)
 - [Contato](#contato)
 
 ---
 
 ## Descrição
 
-Visto que na descrição do desafio contém a explicação para tomar como base o arquivo do Figma e a proposta é ter flexibilidade na estilização e informações a serem exibidas, esse é meu projeto.
-Por conta da API não disponibilizar todos os atributos iguais para todos os pokemons, pode haver diferenciação ao abrir o modal.
-Foi usado commits atômicos para a construção do projeto, uma prática que resulta em um histórico de código mais limpo e organizado.
-Tomei a liberdade de criar uma página dinâmica na aplicação para mostrar mais informações de cada pokemon, visto que é retornado da API muitos atributos.
+- Visto que na descrição do desafio contém a explicação para tomar como base o arquivo do Figma e a proposta é ter flexibilidade na estilização e informações a serem exibidas, esse é meu projeto.
+- Por conta da API não disponibilizar todos os atributos iguais para todos os pokemons, pode haver diferenciação ao abrir o modal.
+- Foi usado commits atômicos para a construção do projeto, uma prática que resulta em um histórico de código mais limpo e organizado.
+- Tomei a liberdade de criar uma página dinâmica na aplicação para mostrar mais informações de cada pokemon, visto que é retornado da API muitos atributos.
+- [Link da Aplicação](https://pro-brain-teste-tecnico.vercel.app/)
 
 ---
 
@@ -31,6 +31,10 @@ Tomei a liberdade de criar uma página dinâmica na aplicação para mostrar mai
 - Paginação para listar os pokemons
 
 ---
+
+## Imagem da Aplicação
+
+<img width="953" alt="Screenshot 2025-01-23 at 21 25 13" src="https://github.com/user-attachments/assets/bacaf1bc-985b-4671-81e8-fdcecda279c2" />
 
 ## Tecnologias Utilizadas
 
