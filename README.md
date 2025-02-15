@@ -81,5 +81,5 @@ Certifique-se de que você tenha instalado:
 
 ## Contato
 - Made with ❤️ by Vadilson Brito
-- LinkedIn:[link](https://www.linkedin.com/in/vandilson-brito-desenvolvedor-frontend/)
-- Portfólio:[link](https://vandilson-portfolio.vercel.app)
+- LinkedIn: [link](https://www.linkedin.com/in/vandilson-brito-desenvolvedor-frontend/)
+- Portfólio: [link](https://vandilson-portfolio.vercel.app)
